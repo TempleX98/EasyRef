@@ -46,7 +46,7 @@ EasyRef is capable of modeling the consistent visual elements of various group i
 <img src='assets/teaser.png'>
 
 ## Release
-- [2024/12/13] 🔥 We release the [training code](https://github.com/TempleX98/EasyRef/blob/main/scripts/multi_ref_finetune.sh), [inference code](https://github.com/TempleX98/EasyRef/blob/main/easyref_demo.ipynb), and [pre-trained model](https://drive.google.com/file/d/14MbHa8RzmXeNz34POlsIDbszVq6UPYgs/view?usp=sharing) on Google Drive! We are also uploading the [pre-trained model](https://huggingface.co/zongzhuofan/EasyRef) to huggingface, and it is expected to be completed today.
+- [2024/12/13] 🔥 We release the [training code](https://github.com/TempleX98/EasyRef/blob/main/scripts/multi_ref_finetuning.sh), [inference code](https://github.com/TempleX98/EasyRef/blob/main/easyref_demo.ipynb), and [pre-trained model](https://drive.google.com/file/d/14MbHa8RzmXeNz34POlsIDbszVq6UPYgs/view?usp=sharing) on Google Drive! We are also uploading the [pre-trained model](https://huggingface.co/zongzhuofan/EasyRef) to huggingface, and it is expected to be completed today.
 
 ## Installation
 
@@ -129,11 +129,11 @@ We only train the final layer of MLLM, the projection layer, and cross-attention
 We provide the training script [here](https://github.com/TempleX98/EasyRef/blob/main/scripts/alignment_pretraining.sh).
 
 ### Single-reference Finetuning
-During this stage, we jointly train the MLLM, its final layer, the projection layer, newly-added LoRA layers and cross-attention adapters. The model is initialized with the checkpoint trained by alignment pretraining. We provide the training script [here](https://github.com/TempleX98/EasyRef/blob/main/scripts/single_ref_finetune.sh).
+During this stage, we jointly train the MLLM, its final layer, the projection layer, newly-added LoRA layers and cross-attention adapters. The model is initialized with the checkpoint trained by alignment pretraining. We provide the training script [here](https://github.com/TempleX98/EasyRef/blob/main/scripts/single_ref_finetuning.sh).
 
 ### Multi-reference Finetuning
 We train the same components as the previous stage but use different training data and augmentations. EasyRef is trained on 32 A100 GPUs with 80GB memory using DeepSpeed ZeRO-2. To train on fewer GPUs, you can reduce the `num_processes` in the script and increase the gradient_accumulation_steps accordingly.
-We provide the training script with DeepSpeed [here](https://github.com/TempleX98/EasyRef/blob/main/scripts/multi_ref_finetune.sh).
+We provide the training script with DeepSpeed [here](https://github.com/TempleX98/EasyRef/blob/main/scripts/multi_ref_finetuning.sh).
 
 ## Inference
 We provide the inference code of EasyRef with SDXL in [**easyref_demo**](easyref_demo.ipynb).

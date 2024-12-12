@@ -30,5 +30,3 @@ accelerate launch --use_deepspeed --num_processes 32 \
   --lora_rank=128 \
   --output_dir="{outputs/multi_ref_finetuning}" \
   --save_steps=20000
-
-#/mnt/afs/zongzhuofan/project/IP-Adapter/checkpoints/pretrain/qwen2_vl_2b_1resampler_64query_tdrop0.05_wd0_black_res1024_10mdata/checkpoint-300000/model.safetensors
