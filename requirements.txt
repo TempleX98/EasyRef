@@ -1,0 +1,14 @@
+diffusers==0.22.1
+torch==2.3.1
+torchvision==0.18.1
+transformers==4.45.2
+qwen_vl_utils==0.0.8
+accelerate
+safetensors
+einops
+omegaconf
+peft
+pillow-avif-plugin
+huggingface-hub==0.23.3
+opencv-python
+gradio
