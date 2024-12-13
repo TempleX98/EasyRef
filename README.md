@@ -35,8 +35,8 @@
               
 
 <a href='https://easyref-gen.github.io/'><img src='https://img.shields.io/badge/Project-Page-green'></a>
-<!-- <a href='https://arxiv.org/abs/xxxx.xxxxx'><img src='https://img.shields.io/badge/Technique-Report-red'></a>
-<a href='https://huggingface.co/papers/xxxx.xxxxx'><img src='https://img.shields.io/static/v1?label=Paper&message=Huggingface&color=orange'></a>  -->
+<a href='https://arxiv.org/abs/2412.09618'><img src='https://img.shields.io/badge/Technique-Report-red'></a>
+<a href='https://huggingface.co/papers/2412.09618'><img src='https://img.shields.io/static/v1?label=Paper&message=Huggingface&color=orange'></a> 
 [![GitHub](https://img.shields.io/github/stars/TempleX98/EasyRef?style=social)](https://github.com/TempleX98/EasyRef)
 <a href='https://huggingface.co/spaces/zongzhuofan/EasyRef'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-blue'></a>
 <a href='https://huggingface.co/zongzhuofan/EasyRef'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue'></a>
@@ -159,6 +159,7 @@ If you find EasyRef useful for your research and applications, please cite us us
 @article{easyref,
   title={EasyRef: Omni-Generalized Group Image Reference for Diffusion Models via Multimodal LLM},
   author={Zong, Zhuofan and Jiang, Dongzhi and Ma, Bingqi and Song, Guanglu and Shao, Hao and Shen, Dazhong and Liu, Yu and Li, Hongsheng},
+  journal={arXiv preprint arXiv:2412.09618},  
   year={2024}
 }
 ```
