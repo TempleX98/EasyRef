@@ -46,7 +46,7 @@ EasyRef is capable of modeling the consistent visual elements of various group i
 <img src='assets/teaser.png'>
 
 ## Release
-- [2024/12/13] 🔥 We release the [training code](https://github.com/TempleX98/EasyRef/blob/main/scripts/multi_ref_finetuning.sh), [inference code](https://github.com/TempleX98/EasyRef/blob/main/easyref_demo.ipynb), and [pre-trained model](https://drive.google.com/file/d/14MbHa8RzmXeNz34POlsIDbszVq6UPYgs/view?usp=sharing) on Google Drive! We are also uploading the [pre-trained model](https://huggingface.co/zongzhuofan/EasyRef) to huggingface, and it is expected to be completed today.
+- [2024/12/13] 🔥 We release the [training code](https://github.com/TempleX98/EasyRef/blob/main/scripts/multi_ref_finetuning.sh), [inference code](https://github.com/TempleX98/EasyRef/blob/main/easyref_demo.ipynb), and [pre-trained model](https://huggingface.co/zongzhuofan/EasyRef)!
 
 ## Installation
 
@@ -136,7 +136,7 @@ We train the same components as the previous stage but use different training da
 We provide the training script with DeepSpeed [here](https://github.com/TempleX98/EasyRef/blob/main/scripts/multi_ref_finetuning.sh).
 
 ## Inference
-We provide the inference code of EasyRef with SDXL in [**easyref_demo**](easyref_demo.ipynb).
+We provide the inference code of EasyRef with SDXL in [**easyref_demo**](https://github.com/TempleX98/EasyRef/blob/main/easyref_demo.ipynb).
 
 ### Usage Tips
 - EasyRef performs best when provided with multiple reference images (more than 2).
