@@ -473,6 +473,8 @@ class EasyRef(IPAdapter):
         mllm_final_layer.lm_head = torch.nn.Identity()
         mllm_final_layer.reference_tokens = torch.nn.Parameter(0.1 * torch.randn(num_tokens, mllm_final_layer.config.hidden_size))
         self.mllm_final_layer = mllm_final_layer.to(self.device)
+        for i in range(len(self.mllm_final_layer.layers)):
+            self.mllm_final_layer.layers[i].self_attn.is_causal = False
 
         multimodal_llm = Qwen2VLForConditionalGeneration.from_pretrained(
             multimodal_llm_path, 
