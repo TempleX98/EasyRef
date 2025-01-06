@@ -46,6 +46,7 @@ EasyRef is capable of modeling the consistent visual elements of various group i
 <img src='assets/teaser.png'>
 
 ## Release
+- [2025/01/06] 🔥 We release the [gradio demo](https://huggingface.co/spaces/zongzhuofan/EasyRef)!
 - [2024/12/13] 🔥 We release the [training code](https://github.com/TempleX98/EasyRef/blob/main/scripts/multi_ref_finetuning.sh), [inference code](https://github.com/TempleX98/EasyRef/blob/main/easyref_demo.ipynb), and [pre-trained model](https://huggingface.co/zongzhuofan/EasyRef)!
 
 ## Installation
