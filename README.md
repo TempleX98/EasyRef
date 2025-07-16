@@ -46,7 +46,7 @@ EasyRef is capable of modeling the consistent visual elements of various group i
 <img src='assets/teaser.png'>
 
 ## Release
-- [2025/04/03] 🔥 The latest EasyRef model (trained January 2025) surpasses the image quality of the previous EasyModel (trained November 2024) and will be open-sourced soon.
+- [2025/07/16] 🎉 EasyRef has been accepted to ICML 2025. We have released updated code and model weights with enhanced subject-preservation capabilities.
 - [2025/01/06] 🔥 We release the [gradio demo](https://huggingface.co/spaces/zongzhuofan/EasyRef)!
 - [2024/12/13] 🔥 We release the [training code](https://github.com/TempleX98/EasyRef/blob/main/scripts/multi_ref_finetuning.sh), [inference code](https://github.com/TempleX98/EasyRef/blob/main/easyref_demo.ipynb), and [pre-trained model](https://huggingface.co/zongzhuofan/EasyRef)!
 
@@ -72,13 +72,17 @@ git clone https://huggingface.co/Qwen/Qwen2-VL-2B-Instruct
 
 ## Demos
 More visualization examples are available in our [project page](https://easyref-gen.github.io/).
-### Comparison with IP-Adapter
+### Qualitative Results
 
 <img src='assets/qualitative.png'>
 
-### Compatibility with ControlNet
+### Subject Preservation Perormance
 
-<img src='assets/controlnet.png'>
+<img src='assets/dreambench.png'>
+
+### Face Preservation Perormance
+
+<img src='assets/face.png'>
 
 ## Training
 
@@ -145,7 +149,17 @@ We provide the inference code of EasyRef with SDXL in [**easyref_demo**](https:/
 - To ensure better identity preservation, we strongly recommend that users upload multiple square face images, ensuring the face occupies the majority of each image.
 - Using multimodal prompts (both reference images and non-empty text prompt) can achieve better results. 
 - We set `scale=1.0` by default. Lowering the `scale` value leads to more diverse but less consistent generation results.
+- Here are the recommended system prompts:
+```python
+# Default prompt 
+system_prompt = "Visualize a scene that closely resembles the provided images, capturing the essence and details described in this prompt:\n"
 
+# Prompt for subject preservation
+system_prompt = "Generate a contextually coherent scene that accurately integrates the primary subjects depicted in the input images and capture the essence and details described in this prompt:\n"
+
+# Prompt for human face preservation
+system_prompt = "Generate a visualization that highlights the human facial features present in the provided images and capture the essence and details described in this prompt:\n"
+```
 
 ## Acknowledgements
 - Our codebase is built upon the [IP-Adapter](https://github.com/tencent-ailab/IP-Adapter) repository.

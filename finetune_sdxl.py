@@ -96,7 +96,7 @@ class MyDataset(torch.utils.data.Dataset):
                  i_drop_rate=0.05, 
                  ti_drop_rate=0.05, 
                  truncate_rate=0.0, 
-                 max_num_images=24, 
+                 max_num_images=16, 
                  cond_image_size=336,
                  image_root_path="", 
                  random_crop=True, 
@@ -612,7 +612,7 @@ def parse_args():
     parser.add_argument(
         "--max_num_images",
         type=int,
-        default=28,
+        default=16,
         help=(
             "Max number of reference images"
         ),
