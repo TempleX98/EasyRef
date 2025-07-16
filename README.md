@@ -138,7 +138,7 @@ We provide the training script [here](https://github.com/TempleX98/EasyRef/blob/
 During this stage, we jointly train the MLLM, its final layer, the projection layer, newly-added LoRA layers and cross-attention adapters. The model is initialized with the checkpoint trained by alignment pretraining. We provide the training script [here](https://github.com/TempleX98/EasyRef/blob/main/scripts/single_ref_finetuning.sh).
 
 ### Multi-reference Finetuning
-We train the same components as the previous stage but use different training data and augmentations. EasyRef is trained on 32 A100 GPUs with 80GB memory using DeepSpeed ZeRO-2. To train on fewer GPUs, you can reduce the `num_processes` in the script and increase the gradient_accumulation_steps accordingly.
+We train the same components as the previous stage but use different training data and augmentations. EasyRef is trained on 64 H800 GPUs with 80GB memory using DeepSpeed ZeRO-2. To train on fewer GPUs, you can reduce the `num_processes` in the script and increase the gradient_accumulation_steps accordingly.
 We provide the training script with DeepSpeed [here](https://github.com/TempleX98/EasyRef/blob/main/scripts/multi_ref_finetuning.sh).
 
 ## Inference
